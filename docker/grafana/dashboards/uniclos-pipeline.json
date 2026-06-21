@@ -1,0 +1,70 @@
+{
+  "annotations": {"list": []},
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {"type": "postgres", "uid": "postgres"},
+      "fieldConfig": {"defaults": {"unit": "short"}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "id": 1,
+      "options": {"legend": {"displayMode": "list", "placement": "bottom"}},
+      "targets": [{
+        "format": "time_series",
+        "rawSql": "SELECT started_at AS time, events_consumed AS value FROM monitoring.pipeline_runs ORDER BY 1",
+        "refId": "A"
+      }],
+      "title": "Evenements consommes par run",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {"type": "postgres", "uid": "postgres"},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "id": 2,
+      "options": {"showHeader": true},
+      "targets": [{
+        "format": "table",
+        "rawSql": "SELECT metric_name, metric_value, target_value, status, measured_at FROM staging.quality_metrics ORDER BY measured_at DESC LIMIT 10",
+        "refId": "A"
+      }],
+      "title": "Derniers controles qualite",
+      "type": "table"
+    },
+    {
+      "datasource": {"type": "postgres", "uid": "postgres"},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+      "id": 3,
+      "options": {"showHeader": true},
+      "targets": [{
+        "format": "table",
+        "rawSql": "SELECT dag_id, events_produced, events_consumed, events_failed, dq_status, duration_sec, started_at FROM monitoring.pipeline_runs ORDER BY started_at DESC LIMIT 20",
+        "refId": "A"
+      }],
+      "title": "Historique runs pipeline",
+      "type": "table"
+    },
+    {
+      "datasource": {"type": "postgres", "uid": "postgres"},
+      "fieldConfig": {"defaults": {"unit": "short"}, "overrides": []},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+      "id": 4,
+      "targets": [{
+        "format": "table",
+        "rawSql": "SELECT COUNT(*) FILTER (WHERE processed = FALSE) AS pending, COUNT(*) AS total FROM raw.streaming_orders",
+        "refId": "A"
+      }],
+      "title": "Commandes streaming (pending vs total)",
+      "type": "stat"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["uniclos", "pipeline"],
+  "time": {"from": "now-6h", "to": "now"},
+  "title": "Uniclos - Pipeline Temps Reel",
+  "uid": "uniclos-pipeline",
+  "version": 1
+}

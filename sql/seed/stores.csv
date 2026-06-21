@@ -1,0 +1,11 @@
+store_code,store_name,city,region,opened_date
+PAR01,UNICLOTHES Paris Marais,Paris,Ile-de-France,2024-01-15
+PAR02,UNICLOTHES Paris Opera,Paris,Ile-de-France,2024-06-01
+LYO01,UNICLOTHES Lyon Confluence,Lyon,Auvergne-Rhone-Alpes,2024-06-01
+MAR01,UNICLOTHES Marseille Vieux-Port,Marseille,PACA,2024-06-01
+BOR01,UNICLOTHES Bordeaux,Bordeaux,Nouvelle-Aquitaine,2024-06-01
+LIL01,UNICLOTHES Lille,Lille,Hauts-de-France,2024-06-01
+NAN01,UNICLOTHES Nantes,Nantes,Pays de la Loire,2024-06-01
+STR01,UNICLOTHES Strasbourg,Strasbourg,Grand Est,2024-06-01
+TLS01,UNICLOTHES Toulouse,Toulouse,Occitanie,2024-06-01
+NCE01,UNICLOTHES Nice,Nice,PACA,2024-06-01

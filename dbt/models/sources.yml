@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: streaming_orders
+
+  - name: dwh
+    schema: dwh
+    tables:
+      - name: dim_customer
+      - name: dim_product

@@ -1,0 +1,21 @@
+product_ref,product_name,category,price_eur,stock_qty
+UC-TS-001,T-shirt coton bio blanc,T-shirts,29.90,486
+UC-TS-002,T-shirt oversize noir,T-shirts,34.90,120
+UC-PA-001,Jean slim indigo,Pantalons,79.90,410
+UC-PA-002,Pantalon chino beige,Pantalons,59.90,183
+UC-RO-001,Robe midi lin,Robes,89.90,222
+UC-RO-002,Robe portefeuille,Robes,69.90,334
+UC-VE-001,Veste denim,Vestes,99.90,311
+UC-VE-002,Blouson leger,Vestes,119.90,466
+UC-AC-001,Echarpe laine,Accessoires,39.90,347
+UC-AC-002,Ceinture cuir,Accessoires,49.90,268
+UC-CH-001,Basket minimaliste,Chaussures,89.90,265
+UC-CH-002,Mocassin cuir,Chaussures,109.90,386
+UC-TS-003,Debardeur coton,T-shirts,24.90,488
+UC-PA-003,Short lin,Pantalons,44.90,309
+UC-RO-003,Combinaison ete,Robes,79.90,270
+UC-VE-003,Parka impermeable,Vestes,149.90,476
+UC-AC-003,Bonnet merinos,Accessoires,29.90,306
+UC-AC-004,Sac tote coton,Accessoires,34.90,427
+UC-TS-004,Polo pique,T-shirts,39.90,208
+UC-PA-004,Jogging confort,Pantalons,54.90,320

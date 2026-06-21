@@ -1,0 +1,22 @@
+name: uniclos_realtime
+version: 1.0.0
+config-version: 2
+profile: uniclos
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+target-path: "/tmp/dbt_target"
+clean-targets:
+  - /tmp/dbt_target
+
+models:
+  uniclos_realtime:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: dwh
+      +materialized: incremental
