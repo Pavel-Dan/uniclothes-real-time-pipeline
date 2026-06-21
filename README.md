@@ -1,4 +1,4 @@
-# Uniclothes — Pipeline temps réel (Bloc 3)
+# UNICLOTHES - Pipeline temps réel
 
 Pipeline micro-batch pour Uniclothes, une enseigne de mode omnicanale. Les commandes web et boutique transitent par Kafka, sont validées, transformées en entrepôt PostgreSQL, contrôlées en qualité et monitorées via Airflow et Grafana.
 
